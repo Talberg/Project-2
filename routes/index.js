@@ -17,16 +17,18 @@ router.use("/api", apiRoutes);
 router.get("/signup", authController.signup);
 router.get("/login", authController.login);
 router.get("/logout", authController.logout);
-router.get("/dashboard", isLoggedIn, authController.dashboard);
+router.get("/home", isLoggedIn, authController.notes);
+router.get('/notes', isLoggedIn,authController.notes)
+router.post('/notes', isLoggedIn , authController.createNote)
 
 router.post("/signup", passport.authenticate("local-signup", {
-    successRedirect: "/dashboard",
+    successRedirect: "/home",
     failureRedirect: "/signup",
     failureFlash: true
 }));
 
 router.post("/login", passport.authenticate("local-login", {
-    successRedirect: "/dashboard",
+    successRedirect: "/home",
     failureRedirect: "/login",
     failureFlash: true
 }));

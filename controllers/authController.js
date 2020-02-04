@@ -5,7 +5,7 @@ module.exports = {
         // if user is logged in, redirect to /dashboard
         if (req.user) {
             req.flash("successMsg", "You're already logged in");
-            return res.redirect("/dashboard");
+            return res.redirect("/home");
         }
 
         res.render("signup");
@@ -14,17 +14,20 @@ module.exports = {
         // if user is logged in, redirect to /dashboard
         if (req.user) {
             req.flash("successMsg", "You're already logged in");
-            return res.redirect("/dashboard");
+            return res.redirect("/home");
         }
 
         res.render("login");
     },
-    dashboard: function (req, res) {
-        db.User.findAll({where:{
-            id:req.user.id
-        }}).then((data)=>{
+    //needs to be a create note also
+    notes: function (req, res) {
+        db.Note.findAll().then((data)=>{
             console.log(data)
-            res.render("dashboard",data)
+            const notes = {
+                test:data
+            }
+            res.render("notes",notes)
+            // res.json({message:'hello'})
         })
         
     },
@@ -32,5 +35,15 @@ module.exports = {
         req.logout();
         req.flash("successMsg", "You successfully logged out");
         res.redirect("/");
+    },
+    createNote: function (req, res) {
+
+       console.log(req.body) 
+      
+        
+    },
+    home:function(){
+
     }
+
 }
