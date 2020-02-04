@@ -1,0 +1,57 @@
+{{> messages}}
+<h1>My Notes</h1>
+<h2>Welcome, {{email}}! You're logged in!</h2>
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="dispensary" type="text" class="validate">
+                <label for="dispensary">Dispensary Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="strain" type="text" class="validate">
+                <label for="strain">Strain Name</label>
+            </div>
+            <div class="row">
+                  <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Strain Species</option>
+                      <option value="1">Sativa</option>
+                      <option value="2">Indica</option>
+                      <option value="3">Hybrid</option>
+                    </select>
+                    <label>Strain Species</label>
+                    </div>
+            </div>
+            <div class="row">
+                <div class ="range-field col s12" id="potency">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="notes" class="materialize-textarea"></textarea>
+                    <label for="notes">My Notes:</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+  var slider = document.getElementById('potency');
+  noUiSlider.create(slider, {
+   start: 25,
+   connect: true,
+   step: .01,
+   orientation: 'horizontal', // 'horizontal' or 'vertical'
+   range: {
+     'min': 0,
+     'max': 40
+   },
+   format: wNumb({
+     decimals: 2
+   })
+  });
+</script>
+
