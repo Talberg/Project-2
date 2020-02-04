@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Sequelize) {
-    var Strain = sequelize.define('Strain', {
+    var Note = sequelize.define('Note', {
         dispensary: {
             type: Sequelize.STRING,
             allowNull: true,
@@ -36,5 +36,5 @@ module.exports = function(sequelize, Sequelize) {
             }
         }
     });
-    return Strain;
+    return Note;
 }

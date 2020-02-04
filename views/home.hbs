@@ -1,11 +1,13 @@
 {{> messages}}
 <h1>Dashboard</h1>
-<h2>Welcome, {{email}}! You're logged in!</h2>
+
 <div class="card">
     <div class="card-body">
         <h3>Example user object (available as req.body in the controller only when user is logged in):</h3>
-        <pre>
-            {{user}}
-        </pre>
+       {{#each test}}
+       <p>{{dataValues.id}}</p>
+       <p>{{dataValues.name}}</p>
+       {{/each}}
     </div>
 </div>
+<script> console.log({{test}})</script>
