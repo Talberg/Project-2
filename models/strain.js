@@ -16,9 +16,9 @@ module.exports = function(sequelize, Sequelize) {
         },
         species: {
             type: Sequelize.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
-                isIn: [['Sativa', 'Hybrid', 'Indica', 'Unknown']]
+                isIn: [['Sativa', 'Hybrid', 'Indica']]
             }
         },
         potency: {
@@ -30,7 +30,7 @@ module.exports = function(sequelize, Sequelize) {
         },
         notes: {
             type: Sequelize.STRING(1000),
-            allowNull: true,
+            allowNull: false,
             validate: {
                 len: [1, 1000]
             }
