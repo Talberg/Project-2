@@ -1,3 +1,5 @@
+const db = require("../models")
+
 module.exports = {
     signup: function (req, res) {
         // if user is logged in, redirect to /dashboard
@@ -18,10 +20,13 @@ module.exports = {
         res.render("login");
     },
     dashboard: function (req, res) {
-        res.render("dashboard", { 
-            email: req.user.email,
-            user: JSON.stringify(req.user, null, 2)
-        });
+        db.User.findAll({where:{
+            id:req.user.id
+        }}).then((data)=>{
+            console.log(data)
+            res.render("dashboard",data)
+        })
+        
     },
     logout: function (req, res) {
         req.logout();
