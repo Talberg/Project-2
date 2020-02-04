@@ -5,12 +5,12 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input id="dispensary" type="text" class="validate">
-                <label for="dispensary">Dispensary Name</label>
+                <input type="text" id="strain" class="autocomplete">
+                <label for="strain">Strain Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="strain" type="text" class="validate">
-                <label for="strain">Strain Name</label>
+                <input id="dispensary" type="text" class="validate">
+                <label for="dispensary">Dispensary Name</label>
             </div>
             <div class="row">
                   <div class="input-field col s12">
@@ -39,7 +39,7 @@
 
 
 <script type="text/javascript">
-  var slider = document.getElementById('potency');
+  const slider = document.getElementById('potency');
   noUiSlider.create(slider, {
    start: 25,
    connect: true,
@@ -53,5 +53,17 @@
      decimals: 2
    })
   });
+
+$(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+
+          // This is placeholder for now!! Fill this dynamically from db
+        "Apple": null,
+        "Microsoft": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    });
+});
 </script>
 
