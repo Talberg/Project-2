@@ -34,6 +34,12 @@ module.exports = function(sequelize, Sequelize) {
             validate: {
                 len: [1, 1000]
             }
+        },
+        userId:{
+            type:Sequelize.INTEGER,
+            allowNull:false,
+            
+            
         }
     });
     return Note;
