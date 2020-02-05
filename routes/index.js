@@ -3,7 +3,6 @@ var passport = require("passport");
 var isLoggedIn = require("../config/middleware/isLoggedIn");
 var authController = require("../controllers/authController.js");
 
-
 // main route
 router.get("/", function (req, res) {
     res.render("index", { successMsg: res.locals.successMsg });

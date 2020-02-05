@@ -1,12 +1,13 @@
 {
-  "name": "sequelize-passport-demo",
+  "name": "weed-diary",
   "version": "1.0.0",
   "description": "Simple authentication demonstration using Sequelize, Node, Express, and Handlebars",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Leah, Alex, Nick",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -21,5 +22,27 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.15.1"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talberg/Project-2.git"
+  },
+  "keywords": [
+    "weed",
+    "diary"
+  ],
+  "bugs": {
+    "url": "https://github.com/Talberg/Project-2/issues"
+  },
+  "homepage": "https://github.com/Talberg/Project-2#readme"
 }
