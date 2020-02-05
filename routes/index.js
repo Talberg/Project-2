@@ -17,7 +17,7 @@ router.use("/api", apiRoutes);
 router.get("/signup", authController.signup);
 router.get("/login", authController.login);
 router.get("/logout", authController.logout);
-router.get("/home", isLoggedIn, authController.notes);
+router.get("/home", isLoggedIn, authController.home);
 router.get('/notes', isLoggedIn,authController.notes)
 router.post('/notes', isLoggedIn , authController.createNote)
 
