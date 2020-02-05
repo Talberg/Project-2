@@ -12,13 +12,20 @@
                     <label>Strain Species</label>
                     </div>
             </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Strain Name</label>
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="row">
     <form class="col s12">
         <div class="row">
-            <div class="input-field col s6">
-                <input type="text" id="strain" class="autocomplete">
-                <label for="strain">Strain Name</label>
-            </div>
             <div class="input-field col s6">
                 <input id="dispensary" type="text" class="validate">
                 <label for="dispensary">Dispensary Name</label>
@@ -42,36 +49,23 @@
 
 
 <script type="text/javascript">
-  const slider = document.getElementById('potency');
-  noUiSlider.create(slider, {
-   start: [25],
-   connect: true,
-   step: .01,
-   orientation: 'horizontal', // 'horizontal' or 'vertical'
-   range: {
-     'min': 0,
-     'max': 40
-   },
-   format: wNumb({
-     decimals: 2
-   })
-});
+//  const slider = document.getElementById('potency');
+//  {{!-- noUiSlider.create(slider, {
+//   start: [25],
+//   connect: true,
+//   step: .01,
+//   orientation: 'horizontal', // 'horizontal' or 'vertical'
+//   range: {
+//     'min': 0,
+//     'max': 40
+//   },
+//   format: wNumb({
+//     decimals: 2
+//   })
+// }); --}}
 
-$(document).ready(function(){
-    $('input.autocomplete').autocomplete({
-      data: {
 
-        {{!-- for (strain of ) --}}
-          // This is placeholder for now!! Fill this dynamically from db
-        "Apple": null,
-        "Microsoft": null,
-        "Google": 'https://placehold.it/250x250'
-      },
-    });
-});
+        
 
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
 </script>
 
