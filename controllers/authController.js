@@ -26,7 +26,7 @@ module.exports = {
             const notes = {
                 test:data
             }
-            res.render("notes",notes)
+            res.render('home',notes)
             // res.json({message:'hello'})
         })
         
@@ -46,7 +46,7 @@ module.exports = {
                 notes:req.body.notes,
                 userId:req.user.id
             }).then((data)=>{
-                res.end()
+                res.render('notes')
             })}
             
         
