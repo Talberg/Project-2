@@ -37,18 +37,27 @@ module.exports = {
         res.redirect("/");
     },
     createNote: function (req, res) {
-
-       console.log(req.body) 
-
-
+        console.log(req.body)
+        console.log('hi')
+            db.Note.create({
+                name:req.body.name,
+                dispensary:req.body.dispensary,
+                species:req.body.species,
+                notes:req.body.notes,
+                userId:req.user.id
+            }).then((data)=>{
+                res.end()
+            })}
+            
+        
       
         
-    },
-    notes:function(){
+    ,
+    notes:function(req,res){
+        console.log(req.user.email)
+        res.render("notes")
 
-    
-
-        res.redirect("/");
+        
 
     }
 
