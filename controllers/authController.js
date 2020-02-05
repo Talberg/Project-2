@@ -20,7 +20,7 @@ module.exports = {
         res.render("login");
     },
     //needs to be a create note also
-    notes: function (req, res) {
+    home: function (req, res) {
         db.Note.findAll().then((data)=>{
             console.log(data)
             const notes = {
@@ -44,7 +44,9 @@ module.exports = {
       
         
     },
-    home:function(){
+    notes:function(){
+
+    
 
         res.redirect("/");
 
