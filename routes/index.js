@@ -2,8 +2,6 @@ var router = require("express").Router();
 var passport = require("passport");
 var isLoggedIn = require("../config/middleware/isLoggedIn");
 var authController = require("../controllers/authController.js");
-var apiRoutes = require("./api");
-
 // main route
 router.get("/", function (req, res) {
     res.render("index", { successMsg: res.locals.successMsg });
