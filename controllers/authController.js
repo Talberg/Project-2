@@ -39,10 +39,14 @@ module.exports = {
     createNote: function (req, res) {
 
        console.log(req.body) 
+
+
       
         
     },
     home:function(){
+
+        res.redirect("/");
 
     }
 
