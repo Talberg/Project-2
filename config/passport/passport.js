@@ -1,11 +1,13 @@
+/* eslint-disable func-names */
 // load bcrypt
-var bCrypt = require("bcrypt-nodejs");
+const bCrypt = require("bcrypt-nodejs");
 
-module.exports = function (passport, user) {
-    var User = user;
-    var LocalStrategy = require("passport-local").Strategy;
+module.exports = function(passport, user) {
+  const User = user;
+  // eslint-disable-next-line global-require
+  const LocalStrategy = require("passport-local").Strategy;
 
-    // used to serialize the user
+  // used to serialize the user
     passport.serializeUser(function (user, done) {
         done(null, user.id);
     });
