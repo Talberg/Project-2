@@ -18,15 +18,9 @@ router.get("/signup", authController.signup);
 router.get("/login", authController.login);
 router.get("/logout", authController.logout);
 router.get("/home", isLoggedIn, authController.home);
-<<<<<<< HEAD
 router.get('/notes', isLoggedIn,authController.notes);
 router.post('/notes' , authController.createNote);
 router.get('/', authController.home)
-=======
-router.get("/notes", isLoggedIn,authController.notes)
-router.post("/notes" , authController.createNote)
-router.get("/",isLoggedIn,authController.home)
->>>>>>> a89433cd1dd4bb2b4fe5e9be53fa6340a8b5515d
 
 router.post(
   "/signup",
