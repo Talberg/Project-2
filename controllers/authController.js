@@ -24,12 +24,8 @@ module.exports = {
         db.Note.findAll().then((data)=>{
             console.log(data[0].dataValues.createdAt)
             console.log(data.length)
-           const forLoop = async _ =>{ 
-             for(var i = 0; i> data.length;i++){
-                let newDate= data[i].dataValues.createdAt.split(0,9)
-                console.log(newDate)
-                data[i].dataValues.date = newDate
-            }
+          
+            
             
             // data.dataValues.createdAt
             // data.dataValues.data = 
@@ -38,8 +34,8 @@ module.exports = {
             }
             res.render('home',notes)
             // res.json({message:'hello'})
-        }
-        forLoop()
+        
+    
         })
         
     },
