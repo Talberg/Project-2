@@ -1,4 +1,5 @@
 const db = require("../models")
+const nodemailer = require('nodemailer')
 
 module.exports = {
     signup: function (req, res) {
@@ -21,7 +22,7 @@ module.exports = {
     },
     //needs to be a create note also
     home: function (req, res) {
-        db.Note.findAll().then((data)=>{
+        db.Note.findAll({order:[['id','DESC']]}).then((data)=>{
             console.log(data[0].dataValues.createdAt)
             console.log(data.length)
           
@@ -47,6 +48,26 @@ module.exports = {
     createNote: function (req, res) {
         console.log(req.body.name)
         console.log('hi')
+        
+        async function main() {
+               // nodemailer s
+           let transporter = nodemailer.createTransport({
+               service: 'gmail',
+               auth: {
+                   user: process.env.DB_EMAIL,
+                   pass: process.env.DB_EMPASS
+               }
+           });
+           let info = await transporter.sendMail({
+               from: '',
+               to: "alexandermtalberg@gmail.com",
+               subject: "Hello",
+               text: "Hello World",
+               html: "<b>MASS EMAIL!</b>"
+           });
+           console.log("Message sent: %s", info.messageId);
+       }
+       main().catch(console.error)
 
             db.Note.create({
                 name:req.body.name,
