@@ -1,0 +1,26 @@
+{
+    "development": {
+        "username": "process.env.DB_USERNAME",
+        "password": "process.env.DB_PASSWORD",
+        "database": "process.env.DB_DATABASE",
+        "host": "process.env.DB_HOST",
+        "port": "process.env.DB_PORT",
+        "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    },
+    "production": {
+      "username": "p2q7zjo1t73exot6",
+      "password": "jt1w0djt0vr56cfo",
+      "database": "tnvd923msikdxz4l",
+      "host": "k2fqe1if4c7uowsh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    }
+  }
