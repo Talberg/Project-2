@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 const moment = require("moment");
 const db = require("../models");
-const db = require("../models")
+// const db = require("../models")
 const nodemailer = require('nodemailer')
 
 module.exports = {
