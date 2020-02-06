@@ -1,9 +1,10 @@
+// eslint-disable-next-line consistent-return
 function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next(); // if logged in, execute next middleware
-    }
+  if (req.isAuthenticated()) {
+    return next(); // if logged in, execute next middleware
+  }
 
-    res.redirect("/login"); // if not logged in, redirect to /login
+  res.redirect("/login"); // if not logged in, redirect to /login
 }
 
 module.exports = isLoggedIn;
