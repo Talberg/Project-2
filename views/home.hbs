@@ -1,9 +1,11 @@
 {{> messages}}
-<h1>Dashboard</h1>
+
+<h1>    Your Diary</h1>
+
 
 <div class="card">
     <div class="card-body">
-        <h3></h3>
+        <h1></h1>
         <ul>
        {{#each test}}
     <li><div class="row">
@@ -15,6 +17,7 @@
           <p>Dispensary: {{dataValues.dispensary}} </p>
           <p>THC %: {{dataValues.dispensary}} </p>
           <p>Method: {{dataValues.dispensary}} </p>
+          <p>Method: {{dataValues.date}} </p>
 
         </div>
         <div class="card-action">
@@ -28,4 +31,5 @@
        </ul>
     </div>
 </div>
+
 <script> console.log({{test}})</script>
