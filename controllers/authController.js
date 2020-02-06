@@ -39,8 +39,8 @@ module.exports = {
             }
             res.render('home',notes)
             // res.json({message:'hello'})
-        }
-        forLoop()
+        
+    
         })
         
     },

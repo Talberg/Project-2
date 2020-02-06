@@ -15,11 +15,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Satisfy|Sofia&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
-        {{> nav}}
+<body> {{> nav}}
+    <div class="container centered">
+       
         {{{ body }}}
     </div>
     <script
@@ -789,6 +790,7 @@
 
      $(document).ready(function(){
     $('select').formSelect();
+    $('.sidenav').sidenav();
   });
   
   $("#submit").on("click",function(event){
