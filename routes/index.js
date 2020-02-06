@@ -19,6 +19,7 @@ router.get("/logout", authController.logout);
 router.get("/home", isLoggedIn, authController.home);
 router.get('/notes', isLoggedIn,authController.notes)
 router.post('/notes' , authController.createNote)
+router.get('/',isLoggedIn,authController.home)
 
 router.post("/signup", passport.authenticate("local-signup", {
     successRedirect: "/home",
