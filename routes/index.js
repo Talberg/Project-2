@@ -1,11 +1,12 @@
-var router = require("express").Router();
-var passport = require("passport");
-var isLoggedIn = require("../config/middleware/isLoggedIn");
-var authController = require("../controllers/authController.js");
+const router = require("express").Router();
+const passport = require("passport");
+const isLoggedIn = require("../config/middleware/isLoggedIn");
+const authController = require("../controllers/authController.js");
 
 // main route
-router.get("/", function (req, res) {
-    res.render("index", { successMsg: res.locals.successMsg });
+// eslint-disable-next-line func-names
+router.get("/", function(req, res) {
+  res.render("index", { successMsg: res.locals.successMsg });
 });
 
 // API routes (add files/routes within '/api' to run CRUD operations against your
@@ -17,20 +18,32 @@ router.get("/signup", authController.signup);
 router.get("/login", authController.login);
 router.get("/logout", authController.logout);
 router.get("/home", isLoggedIn, authController.home);
+<<<<<<< HEAD
 router.get('/notes', isLoggedIn,authController.notes);
 router.post('/notes' , authController.createNote);
 router.get('/', authController.home)
+=======
+router.get("/notes", isLoggedIn,authController.notes)
+router.post("/notes" , authController.createNote)
+router.get("/",isLoggedIn,authController.home)
+>>>>>>> a89433cd1dd4bb2b4fe5e9be53fa6340a8b5515d
 
-router.post("/signup", passport.authenticate("local-signup", {
+router.post(
+  "/signup",
+  passport.authenticate("local-signup", {
     successRedirect: "/home",
     failureRedirect: "/signup",
-    failureFlash: true
-}));
+    failureFlash: true,
+  })
+);
 
-router.post("/login", passport.authenticate("local-login", {
+router.post(
+  "/login",
+  passport.authenticate("local-login", {
     successRedirect: "/home",
     failureRedirect: "/login",
-    failureFlash: true
-}));
+    failureFlash: true,
+  })
+);
 
 module.exports = router;
