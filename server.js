@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // handlebars middleware setup
-app.set("views", "./views");
+// app.set("views", "./views");
 app.engine("hbs", exphbs({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 
