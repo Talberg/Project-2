@@ -806,9 +806,16 @@
       
     }).then(function(){
       location.reload()
-    })
-    ;
     });
+
+      $(".strain").val("");
+      $("#dispensary").val("");
+      $("#notes").val("");
+      $(".species").val("");
+      $(".method").val("");
+
+    });
+    
     $('#delete').on('click',function(event){
       event.preventDefault()
       console.log($(this).attr('data'))
@@ -819,9 +826,7 @@
       ).then(function(){
         location.reload()
       })
-
-      
-    })
+    });
      
 
   
