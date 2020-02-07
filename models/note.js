@@ -19,10 +19,6 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.STRING,
       allowNull: true,
     },
-    method: {
-      type: Sequelize.STRING,
-      allowNull: true,
-    },
     potency: {
       type: Sequelize.DECIMAL(10, 2),
       allowNull: true,
