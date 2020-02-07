@@ -39,7 +39,7 @@
 
     
     $(document).ready(function(){
-    $('input.autocomplete').autocomplete({
+    $('input.strainAuto').autocomplete({
       data: {
 "Acapulco Gold":null,
 "Alaskan Thunder Fuck":null,
@@ -799,6 +799,7 @@
   
   $("#submit").on("click",function(event){
    event.preventDefault();
+    console.log($('.species'))
     $.post("/notes",{
       name: $(".strain").val(),
       dispensary: $("#dispensary").val(),
@@ -829,7 +830,16 @@
       ).then(function(){
         location.reload()
       })
+<<<<<<< HEAD
+
+      
+    })
+    $('#update').on('click',function(event){
+      
+    })
+=======
     });
+>>>>>>> master
      
 
   
