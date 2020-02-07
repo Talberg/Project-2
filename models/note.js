@@ -26,6 +26,10 @@ module.exports = function(sequelize, Sequelize) {
         isDecimal: true,
       },
     },
+    method: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
     notes: {
       type: Sequelize.STRING(1000),
       allowNull: false,

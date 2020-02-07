@@ -36,12 +36,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
     <script src="/assets/styles/nouislider.js"></script>
     <script type="text/javascript">
-
-
-   // let val = $("#potency").slider("option", "value");
     
     $(document).ready(function(){
-    $('input.autocomplete').autocomplete({
+    $('input.strainAuto').autocomplete({
       data: {
 "Acapulco Gold":null,
 "Alaskan Thunder Fuck":null,
@@ -797,10 +794,10 @@
     $('select').formSelect();
     $('.sidenav').sidenav();
   });
-
   
   $("#submit").on("click",function(event){
    event.preventDefault();
+    console.log($('.species'))
     $.post("/notes",{
       name: $(".strain").val(),
       dispensary: $("#dispensary").val(),
@@ -808,16 +805,12 @@
       species:$("#species").val(),
       method:$("#method").val(),
       potency:$("#potency").val()
+      
     }).then(function(){
-      console.log(val);
       location.reload()
     });
 
-      $(".strain").val("");
-      $("#dispensary").val("");
-      $("#notes").val("");
-      $(".species").val("");
-      $(".method").val("");
+    
 
     });
     
@@ -832,6 +825,8 @@
         location.reload()
       })
     });
+
+
      
 
   
