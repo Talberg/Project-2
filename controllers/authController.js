@@ -96,6 +96,7 @@ module.exports = {
       species: req.body.species,
       notes: req.body.notes,
       userId: req.user.id,
+      method: req.body.method,
       potency: req.body.potency,
       date: newDate,
     }).then(data => {
