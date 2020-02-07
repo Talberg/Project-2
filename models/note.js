@@ -37,6 +37,10 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.INTEGER,
       allowNull: false,
     },
+    date: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
   });
   return Note;
 };
