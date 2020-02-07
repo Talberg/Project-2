@@ -9,6 +9,8 @@
 }
 body{
     background-image: url('../grungy_paper_texture_v_5_by_bashcorpo_ddo9g6.jpg');
+   
+
 }
 a {font-family: 'Satisfy', cursive;
 
@@ -19,3 +21,13 @@ h3{
 p{
     font-family: 'Courgette', cursive;
 }
+
+
+  main {
+    flex: 1 0 auto;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
