@@ -802,8 +802,9 @@
       name: $(".strain").val(),
       dispensary: $("#dispensary").val(),
       notes:$("#notes").val(),
-      species:$(".species").val(),
-      method:$(".method").val()
+      species:$("#species").val(),
+      method:$("#method").val(),
+      potency:$("#potency").val()
       
     }).then(function(){
       location.reload()
