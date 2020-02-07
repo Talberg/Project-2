@@ -804,10 +804,27 @@
       species:$(".species").val(),
       method:$(".method").val()
       
-    }),function(data){
+    }).then(function(){
+      location.reload()
+    })
     ;
-    }
-  })
+    });
+    $('#delete').on('click',function(event){
+      event.preventDefault()
+      console.log($(this).attr('data'))
+      const noteid = $(this).attr('data')
+      $.ajax({
+        method:'DELETE',
+        url : `/notes/${noteid}`}
+      ).then(function(){
+        location.reload()
+      })
+
+      
+    })
+     
+
+  
     </script>
 </body>
 
