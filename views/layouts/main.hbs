@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weed Diary</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -807,9 +807,16 @@
       
     }).then(function(){
       location.reload()
-    })
-    ;
     });
+
+      $(".strain").val("");
+      $("#dispensary").val("");
+      $("#notes").val("");
+      $(".species").val("");
+      $(".method").val("");
+
+    });
+    
     $('#delete').on('click',function(event){
       event.preventDefault()
       console.log($(this).attr('data'))
@@ -820,12 +827,16 @@
       ).then(function(){
         location.reload()
       })
+<<<<<<< HEAD
 
       
     })
     $('#update').on('click',function(event){
       
     })
+=======
+    });
+>>>>>>> master
      
 
   
