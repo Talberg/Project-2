@@ -93,6 +93,7 @@ main().catch(console.error)
       potency: req.body.potency,
       date: newDate,
     }).then(data => {
+      console.log(req.body);
       res.render("notes", data);
     });
   },
