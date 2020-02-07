@@ -27,7 +27,7 @@ module.exports = {
     home: function (req, res) {
         db.Note.findAll({where:{userId:req.user.id},
           order:[['id','DESC']]}).then((data)=>{
-            console.log(data[0].dataValues.createdAt)
+            
             console.log(data.length)
           
             
@@ -106,4 +106,12 @@ module.exports = {
     console.log(req.user.email);
     res.render("notes");
   },
+  delete(req,res){
+    const id = req.param('id')
+    db.Note.destroy({where: {
+      id: id
+    }}).then((data)=>{
+      res.end()
+    })
+  }
 };
