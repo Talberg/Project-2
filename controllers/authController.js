@@ -49,32 +49,7 @@ module.exports = {
         req.flash("successMsg", "You successfully logged out");
         res.redirect("/");
     },
-    createNote: function (req, res) {
-        console.log(req.body.name)
-        console.log('hi')
-        
-        async function main() {
-               // nodemailer s
-           let transporter = nodemailer.createTransport({
-               service: 'gmail',
-               auth: {
-                   user: process.env.DB_EMAIL,
-                   pass: process.env.DB_EMPASS
-               }
-           });
-           let info = await transporter.sendMail({
-               from: '',
-               to: "alexandermtalberg@gmail.com",
-               subject: "Hello",
-               text: "Hello World",
-               html: "<b>MASS EMAIL!</b>"
-           });
-           console.log("Message sent: %s", info.messageId);
-       }
-       main().catch(console.error)
-
-    res.render("login");
-  },
+   
   // needs to be a create note also
   
 
@@ -88,6 +63,25 @@ module.exports = {
     console.log("hi");
     const newDate = moment().format("llll");
     console.log(newDate);
+    async function main() {
+      // nodemailer s
+  let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+          user: process.env.DB_EMAIL,
+          pass: process.env.DB_EMPASS
+      }
+  });
+  let info = await transporter.sendMail({
+      from: '',
+      to: req.user.email,
+      subject: "Your New Note!",
+      text: `${req.body.name}`,
+      html: `<b>YOUR NOTE ON ${req.body.name} FROM ${req.body.dispensary} was created</b>`
+  });
+  console.log("Message sent: %s", info.messageId);
+}
+main().catch(console.error)
 
     db.Note.create({
       name: req.body.name,
