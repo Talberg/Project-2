@@ -36,7 +36,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
     <script src="/assets/styles/nouislider.js"></script>
     <script type="text/javascript">
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of ccc0965... all vals pulling except method
     
     $(document).ready(function(){
     $('input.strainAuto').autocomplete({
@@ -795,7 +798,6 @@
     $('select').formSelect();
     $('.sidenav').sidenav();
   });
-
   
   $("#submit").on("click",function(event){
    event.preventDefault();
@@ -804,11 +806,10 @@
       name: $(".strain").val(),
       dispensary: $("#dispensary").val(),
       notes:$("#notes").val(),
-      species:$("#species").val(),
-      method:$("#method").val(),
-      potency:$("#potency").val()
+      species:$(".species").val(),
+      method:$(".method").val()
+      
     }).then(function(){
-      console.log(val);
       location.reload()
     });
 
@@ -834,12 +835,15 @@
 
       
     })
+<<<<<<< HEAD
     $('#update').on('click',function(event){
       
     })
 =======
     });
 >>>>>>> master
+=======
+>>>>>>> parent of ccc0965... all vals pulling except method
      
 
   
