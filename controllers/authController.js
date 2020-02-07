@@ -103,7 +103,6 @@ module.exports = {
       res.render("notes", data);
     });
   },
-
   notes(req, res) {
     console.log(req.user.email);
     res.render("notes");
