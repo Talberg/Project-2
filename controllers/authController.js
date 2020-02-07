@@ -25,7 +25,8 @@ module.exports = {
     },
     //needs to be a create note also
     home: function (req, res) {
-        db.Note.findAll({order:[['id','DESC']]}).then((data)=>{
+        db.Note.findAll({where:{userId:req.user.id},
+          order:[['id','DESC']]}).then((data)=>{
             console.log(data[0].dataValues.createdAt)
             console.log(data.length)
           
@@ -75,16 +76,7 @@ module.exports = {
     res.render("login");
   },
   // needs to be a create note also
-  home(req, res) {
-    db.Note.findAll().then(data => {
-      console.log(data[0].dataValues.createdAt);
-      console.log(data.length);
-      const notes = {
-        test: data,
-      };
-      res.render("home", notes);
-    });
-  },
+  
 
   logout(req, res) {
     req.logout();
