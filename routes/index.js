@@ -18,10 +18,10 @@ router.get("/signup", authController.signup);
 router.get("/login", authController.login);
 router.get("/logout", authController.logout);
 router.get("/home", isLoggedIn, authController.home);
-router.get('/notes', isLoggedIn,authController.notes);
-router.post('/notes' , authController.createNote);
-router.get('/', authController.home)
-router.delete('/notes/:id',isLoggedIn, authController.delete )
+router.get("/notes", isLoggedIn, authController.notes);
+router.post("/notes", authController.createNote);
+router.get("/", authController.home);
+router.delete("/notes/:id", isLoggedIn, authController.delete);
 
 router.post(
   "/signup",
