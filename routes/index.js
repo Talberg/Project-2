@@ -22,6 +22,8 @@ router.get("/notes", isLoggedIn, authController.notes);
 router.post("/notes", authController.createNote);
 router.get("/", authController.home);
 router.delete("/notes/:id", isLoggedIn, authController.delete);
+router.get("/search", authController.strain);
+router.get("/search/:strain", authController.search);
 
 router.post(
   "/signup",

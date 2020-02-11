@@ -2895,6 +2895,12 @@
         location.reload()
       })
     });
+    $("#search").on("click", function(event){
+      event.preventDefault()
+      const strain = $(".strain").val()
+      location.replace(`/search/${strain}`)
+      
+    })
 
     </script>
 </body>

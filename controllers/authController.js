@@ -108,4 +108,22 @@ module.exports = {
       res.end();
     });
   },
+  strain(req, res) {
+    res.render("search")
+  },
+  search(req, res) {
+    console.log(req.param("strain"))
+    db.cannabis.findAll(
+    {where:{
+    Strain:req.param("strain").split(" ").join("-"),
+    }}).then((data)=>{
+
+      const search = {
+        test: data[0]
+      }
+      console.log(data[0].dataValues)
+     res.render("search", search)
+
+    })
+  }
 };
