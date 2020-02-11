@@ -1,7 +1,7 @@
 <div class="row">
     <div class="card col s12">
         <div class="card-body">
-            <h3 class="center"> Search for your favorite strain!</h3>
+            <h3 class="center"> Strain Search </h3>
             <div class="input-field col s12">
 
 
@@ -14,16 +14,43 @@
 
 
             </div>
-            <button class="btn waves-effect waves-light" id="search"  name="action">Search
+            <button class="btn waves-effect waves-light right" id="search" name="action">Search
 
                 <i class="material-icons right">send</i>
             </button>
             <br>
-            <hr>{{#if data}}
-            <div class="card"><div class="card-body">
-    <h3>{{data}}</h3>
-    </div></div>
-    {{/if}}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr>{{#if test}}
+            <div class="card">
+                <div class="card-body">
+
+                    <h3 class="normal"> {{test.dataValues.Strain}}</h3><br>
+                    <hr>
+                    <h4>Description</h4>
+
+                    <p> {{test.dataValues.Description}} </p>
+                    <hr>
+                    <h5>Type: {{test.dataValues.Type}} </h5>
+                    <hr>
+                    <h5>Flavor: {{test.dataValues.Flavor}}</h5>
+                    <hr>
+                    <h5>Effects: {{test.dataValues.Effects}}</h5>
+                    <br>
+                    <button class="btn waves-effect waves-light" id="favorite" name="action">Favorite
+
+                        <i class="material-icons right">star_border</i>
+                    </button>
+
+                </div>
+            </div>
+            {{/if}}
 
         </div>
     </div>
+    <script>
+
+    </script>

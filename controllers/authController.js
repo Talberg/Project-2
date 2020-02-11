@@ -112,17 +112,17 @@ module.exports = {
     res.render("search")
   },
   search(req, res) {
-    console.log(req.body.strain)
+    console.log(req.param("strain"))
     db.cannabis.findAll(
     {where:{
-    Strain:req.body.strain,
+    Strain:req.param("strain").split(" ").join("-"),
     }}).then((data)=>{
-      console.log(data.cannabis)
+
       const search = {
-        search: data
+        test: data[0]
       }
-      console.log(search)
-     res.render("search")
+      console.log(data[0].dataValues)
+     res.render("search", search)
 
     })
   }
