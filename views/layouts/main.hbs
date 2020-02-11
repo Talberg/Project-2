@@ -2895,6 +2895,16 @@
         location.reload()
       })
     });
+    $("#search").on("click", function(event){
+      event.preventDefault()
+      const strain = $(".strain").val().split(" ").join("-")
+      console.log(strain)
+       $.post("search",{
+         strain:strain
+       }).then((data)=>{
+         console.log(data)
+       })
+    })
 
     </script>
 </body>

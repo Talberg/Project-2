@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="card col s12">
+        <div class="card-body">
+            <h3 class="center"> Search for your favorite strain!</h3>
+            <div class="input-field col s12">
+
+
+
+                <i class="material-icons prefix">textsms</i>
+
+                <input type="text" id="autocomplete-input" class="strain strainAuto">
+
+                <label for"autocomplete-input">Strain Name</label>
+
+
+            </div>
+            <button class="btn waves-effect waves-light" id="search"  name="action">Search
+
+                <i class="material-icons right">send</i>
+            </button>
+            <br>
+            <hr>{{#if data}}
+            <div class="card"><div class="card-body">
+    <h3>{{data}}</h3>
+    </div></div>
+    {{/if}}
+
+        </div>
+    </div>
