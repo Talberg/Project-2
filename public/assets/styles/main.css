@@ -16,7 +16,7 @@ a {font-family: 'Satisfy', cursive;
 
 }
 h3{
-    font-family: 'Courgette', cursive;
+  font-family: 'Satisfy', cursive;
 }
 p{
   
@@ -32,10 +32,10 @@ p{
     width: 100%;
   }
   h2{
-    font-family: 'Courgette', cursive;
+    font-family: 'Satisfy', cursive;
   }
   .normal{
-    font-family: Arial, Helvetica, sans-serif;
+   
   }
   #searchBar{
   color: black;
@@ -49,3 +49,11 @@ p{
   .searchBox{
     padding-right: 20% ;
   }
+  @media (max-width:700px){
+    .searchBar {
+        margin-top: -15%;
+        margin-right: 5%;
+
+    }}
+
+   
