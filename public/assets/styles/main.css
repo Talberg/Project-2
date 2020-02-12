@@ -37,3 +37,15 @@ p{
   .normal{
     font-family: Arial, Helvetica, sans-serif;
   }
+  #searchBar{
+  color: black;
+    margin-left: 3% ;
+
+  }
+  .searchBar{
+    margin-top: -5%;
+    margin-right: 5%;
+  }
+  .searchBox{
+    padding-right: 20% ;
+  }
