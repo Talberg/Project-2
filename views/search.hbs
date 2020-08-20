@@ -7,7 +7,7 @@
                 <div class="card-body">
                       <div class="card">
                 <div class="card-body teal lighten-2">
-                    <h3 class=" white-text center "> {{test.dataValues.Strain}}</h3><br>
+                    <h3 class=" white-text  center "> {{test.dataValues.Strain}}</h3><br>
                     </div></div>
                     <hr>
                     <h4>Description</h4>
@@ -20,9 +20,9 @@
                     <hr>
                     <h5>Effects: {{test.dataValues.Effects}}</h5>
                     <br>
-                    <button class="btn waves-effect waves-light" id="favorite" name="action">Favorite
+                    <button class="btn waves-effect waves-light" data-id="{{test.dataValues.Strain}}" id="favorite" name="action">Favorite
 
-                        <i class="material-icons right">star_border</i>
+                        <i id=""  class="material-icons right">star_border</i>
                     </button>
 
                 </div>

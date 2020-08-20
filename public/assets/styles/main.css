@@ -54,6 +54,17 @@ p{
         margin-top: -15%;
         margin-right: 5%;
 
-    }}
+    }
 
+    
+  }
+  @media (max-width:800px){
+    .searchBar {
+        margin-top: -15%;
+        margin-right: 5%;
+
+    }
+    
+    
+  }
    
